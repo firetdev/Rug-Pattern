@@ -19,9 +19,9 @@ int main() {
     while (running) {
         grid[y][x] += 1;
 
-        x = 0 ? x = 1 : x = 0;
+        x = (x == 0) ? 1 : 0;
         y += increment;
-        if (y > 5)
+        if (y > 4)
             y -= 5;
 
         int numberDone = 0;
@@ -30,7 +30,7 @@ int main() {
                 numberDone++;
             }
         }
-        if (numberDone >= 10) {
+        if (numberDone >= 5) {
             running = false;
         }
     }
