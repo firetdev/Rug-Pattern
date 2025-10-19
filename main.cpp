@@ -20,8 +20,11 @@ int main() {
         grid[y][x] += 1;
 
         x = (x == 0) ? 1 : 0;
-        y += increment;
-        if (y > 4)
+        if (x == 1) {
+            y += increment;
+            increment++;
+        }
+        while (y > 4)
             y -= 5;
 
         int numberDone = 0;
